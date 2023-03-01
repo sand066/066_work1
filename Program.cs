@@ -21,17 +21,18 @@ namespace PasswordChecker
                     && (password / 1000 )%10 >=6 && (password / 1000 )%10 !=8)
 
                     {
+                      if ((password % 10 != 0) && (password / 10)%10 != 0 && (password / 100)%10 != 0 && (password / 1000)%10 != 0 && (password / 10000)%10 != 0 && (password /100000 != 0))  
                         answered = true;
                     }
                     break;
             }
         if (answered)
             {
-                Console.WriteLine("Your password is corrected.");
+                Console.WriteLine("Password are corrected.");
             }
             else
             {
-                Console.WriteLine("Password is incorrected.");
+                Console.WriteLine("Password are incorrected.");
             }
         }
     }
