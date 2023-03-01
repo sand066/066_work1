@@ -25,8 +25,17 @@ namespace PasswordChecker
                         answered = true;
                     }
                     break;
+                case "FBI":
+                    if ((password / 100000)%10 >=4 && (password / 100000)%10 <=7 && ((password/100)%10)%2 ==0 && ((password/100)%10) !=6 && ((password/10000)%10) !=0 && ((password/10000)%10) !=2 
+                         && ((password/10000)%10) !=4 && ((password/10000)%10) !=6 && ((password/10000)%10) !=8)
+                    {
+                      if ((password % 10 != 0 ) && ((password / 10) % 10 != 0 ) && ((password / 100) % 10 != 0 )  && 
+                          ((password / 1000) % 10 != 0 ) && ((password / 10000) % 10 != 0) && (password / 100000 != 0 ))
+                        answered = true;
+                    }
+                    break;
             }
-        if (answered)
+                if (answered)
             {
                 Console.WriteLine("Password are corrected.");
             }
