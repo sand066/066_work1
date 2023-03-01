@@ -34,6 +34,19 @@ namespace PasswordChecker
                         answered = true;
                     }
                     break;
+                case "NSA":
+                    if (password % 10 !=4 && password % 10 !=7 && password % 10 !=8 && password % 10 !=9 && password % 10 !=0 && ((password/100)%10)%3 ==0 && (password % 10 == 7 ) 
+                        || ((password / 10) % 10 == 7)|| ((password / 100) % 10 == 7) || ((password / 1000) % 10 == 7) || ((password / 10000) % 10 == 7) || (password / 100000 == 7) 
+                        )
+                    {
+                      if ((password % 10 != 0 ) && ((password / 10) % 10 != 0 ) && ((password / 100) % 10 != 0 )  && 
+                          ((password / 1000) % 10 != 0 ) && ((password / 10000) % 10 != 0) && (password / 100000 != 0 ))
+                        answered = true;
+                    }
+                    break;
+                default:
+                    break;
+
             }
                 if (answered)
             {
