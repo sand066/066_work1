@@ -46,9 +46,8 @@ namespace PasswordChecker
                     break;
                 default:
                     break;
-
             }
-                if (answered)
+            if (answered)
             {
                 Console.WriteLine("Password are corrected.");
             }
